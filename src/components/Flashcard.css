@@ -1,0 +1,35 @@
+.flashcard {
+    width: 300px;
+    height: 200px;
+    border: 2px solid #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin: 20px auto;
+    font-size: 1.2em;
+    text-align: center;
+    background-color: #f0ec06;
+    filter: brightness(0.9);
+  }
+  
+  .flashcard-container {
+    text-align: center;
+    color:#000;
+  }
+  
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
