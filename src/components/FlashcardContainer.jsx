@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import Flashcard from './Flashcard';
 import './Flashcard.css';
 
@@ -9,30 +9,37 @@ function FlashcardContainer() {
     { question: "Which show features Walter White?", answer: "*Breaking Bad*" },
     { question: "In which year was *Titanic* released?", answer: "1997" },
     { question: "Which movie won Best Picture in 2020?", answer: "*Parasite*" },
+    { question: "Which actor voiced Woody in *Toy Story*?", answer: "Tom Hanks" },
+    { question: "In *Friends*, what is the name of Ross's second wife?", answer: "Emily" },
+    { question: "Who directed the 1994 movie *Pulp Fiction*?", answer: "Quentin Tarantino" },
+    { question: "Which TV show follows the lives of the Pearson family across different time periods?", answer: "*This Is Us*" },
+    { question: "In *Harry Potter*, what is the name of the Weasley family's house?", answer: "The Burrow" },
   ];
 
   const [currentCardIndex, setCurrentCardIndex] = useState(-1); // -1 indicates the "Are you ready?" card
-  const [usedIndices, setUsedIndices] = useState([]);
-  const [showInstructions, setShowInstructions] = useState(false); // Toggle instructions
+  const [usedIndices, setUsedIndices] = useState([]); // Track used cards
+  const [isFlipped, setIsFlipped] = useState(false); // Track flip state
 
   const nextCard = () => {
-    if (currentCardIndex === -1) {
-      // This will skip the "Are you ready?" card and go to the first trivia question
-      setCurrentCardIndex(0);
-    } else {
-      // Handle moving to the next random card that hasn't been used
-      if (usedIndices.length < cardSet.length) {
-        let randomIndex;
-        do {
-          randomIndex = Math.floor(Math.random() * cardSet.length);
-        } while (usedIndices.includes(randomIndex));
+    setIsFlipped(false); // Reset to the question side when moving to the next card
 
-        setUsedIndices([...usedIndices, randomIndex]);
-        setCurrentCardIndex(randomIndex);
-      } else {
-        alert("You've gone through all the cards! Click next to keep playing again."); // This can be replaced with an end-of-game screen
-        setUsedIndices([]); // Optionally reset to allow the user to play again
-      }
+    if (currentCardIndex === -1) {
+      // First card after "Are you ready?"
+      setCurrentCardIndex(0);
+    } else if (usedIndices.length < cardSet.length) {
+      // Choose the next random card that hasn't been used yet
+      let randomIndex;
+      do {
+        randomIndex = Math.floor(Math.random() * cardSet.length);
+      } while (usedIndices.includes(randomIndex));
+
+      setUsedIndices([...usedIndices, randomIndex]);
+      setCurrentCardIndex(randomIndex);
+    } else {
+      // All cards have been used, reset for another round
+      alert("You've gone through all the cards! Click ok to start again.");
+      setUsedIndices([]); // Reset used indices
+      setCurrentCardIndex(-1); // Show the "Are you ready?" card again
     }
   };
 
@@ -41,12 +48,16 @@ function FlashcardContainer() {
       {currentCardIndex === -1 ? (
         <Flashcard
           question="Are you ready? Click on the card."
-          answer="Click Next to go to the next card and flip over for the answer. Click once more before starting"
+          answer="Click Next to go to the next card and flip over for the answer."
+          isFlipped={isFlipped}
+          setIsFlipped={setIsFlipped}
         />
       ) : (
         <Flashcard
           question={cardSet[currentCardIndex].question}
           answer={cardSet[currentCardIndex].answer}
+          isFlipped={isFlipped}
+          setIsFlipped={setIsFlipped}
         />
       )}
       <button onClick={nextCard}>Next</button>

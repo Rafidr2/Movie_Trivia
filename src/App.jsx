@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
-import FlashcardContainer from './components/FlashcardContainer';
+import FlashcardContainer from './components/FlashcardContainer'; // Import the container component
+import ScoreTracker from './components/ScoreTracker'; // Import the score tracker
 
 function App() {
   const title = "Movie/TV Trivia Flashcards";
@@ -9,7 +10,10 @@ function App() {
 
   return (
     <div className="app">
-      <h1>{title}</h1>
+      <div className="header">
+        <h1>{title}</h1>
+        <ScoreTracker />
+      </div>
       <p>{description}</p>
       <p>Total Cards: {totalCards}</p>
       <FlashcardContainer />
@@ -18,3 +22,4 @@ function App() {
 }
 
 export default App;
+
