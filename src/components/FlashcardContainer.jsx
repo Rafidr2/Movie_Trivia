@@ -4,16 +4,16 @@ import './Flashcard.css';
 
 function FlashcardContainer() {
   const cardSet = [
-    { question: "Who directed *Inception*?", answer: "Christopher Nolan" },
-    { question: "Who played Iron Man in the MCU?", answer: "Robert Downey Jr." },
-    { question: "Which show features Walter White?", answer: "*Breaking Bad*" },
-    { question: "In which year was *Titanic* released?", answer: "1997" },
-    { question: "Which movie won Best Picture in 2020?", answer: "*Parasite*" },
-    { question: "Which actor voiced Woody in *Toy Story*?", answer: "Tom Hanks" },
-    { question: "In *Friends*, what is the name of Ross's second wife?", answer: "Emily" },
-    { question: "Who directed the 1994 movie *Pulp Fiction*?", answer: "Quentin Tarantino" },
-    { question: "Which TV show follows the lives of the Pearson family across different time periods?", answer: "*This Is Us*" },
-    { question: "In *Harry Potter*, what is the name of the Weasley family's house?", answer: "The Burrow" },
+    { question: "Who directed *Inception*?", answer: "Christopher Nolan", type: "movie"},
+    { question: "Who played Iron Man in the MCU?", answer: "Robert Downey Jr.", type: "movie" },
+    { question: "Which show features Walter White?", answer: "*Breaking Bad*", type: "tv" },
+    { question: "In which year was *Titanic* released?", answer: "1997", type: "movie" },
+    { question: "Which movie won Best Picture in 2020?", answer: "*Parasite*", type: "movie" },
+    { question: "Which actor voiced Woody in *Toy Story*?", answer: "Tom Hanks", type: "movie" },
+    { question: "In *Friends*, what is the name of Ross's second wife?", answer: "Emily", type: "tv" },
+    { question: "Who directed the 1994 movie *Pulp Fiction*?", answer: "Quentin Tarantino", type: "movie" },
+    { question: "Which TV show follows the lives of the Pearson family across different time periods?", answer: "*This Is Us*", type: "tv" },
+    { question: "In *Harry Potter*, what is the name of the Weasley family's house?", answer: "The Burrow", type: "movie" },
   ];
 
   const [currentCardIndex, setCurrentCardIndex] = useState(-1); // -1 indicates the "Are you ready?" card
@@ -58,7 +58,9 @@ function FlashcardContainer() {
           answer={cardSet[currentCardIndex].answer}
           isFlipped={isFlipped}
           setIsFlipped={setIsFlipped}
+          type={cardSet[currentCardIndex].type} // Pass type here
         />
+
       )}
       <button onClick={nextCard}>Next</button>
     </div>

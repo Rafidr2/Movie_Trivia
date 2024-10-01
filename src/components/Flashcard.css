@@ -32,4 +32,15 @@
   button:hover {
     background-color: #0056b3;
   }
+
+  .flashcard.movie {
+    background-color: #2882f8;
+  }
+  
+  .flashcard.tv {
+    background-color: #ec1a47;
+  }
+
+  
+  
   
