@@ -29,13 +29,14 @@ The following **additional** features are implemented:
 - [X] Play again feature automatically active once one round is finished.
 
 ## Video Walkthrough
+![Project2_Video-ezgif com-optimize]()
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://imgur.com/a/rPlTP4U' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/user-attachments/assets/53aac1df-df7c-4feb-8000-849b434250e1' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
-GIF created with ...  
+GIF created with ezgif.com
 <!-- Recommended tools:
 [Kap](https://getkap.co/) for macOS
 [ScreenToGif](https://www.screentogif.com/) for Windows
