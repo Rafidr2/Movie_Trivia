@@ -33,14 +33,14 @@ The following **additional** features are implemented:
 
 - [X] Created a score counter so if the user is playing with friends they can keep score.
 - [X] Randomized cards and made sure no card is repeated until all of them are shown at least once.
-- [X] Play again feature automatically active once one round is finished.
+- [X] Play again feature after round is finished with shuffle button.
 
 ## Video Walkthrough
 ![Project2_Video-ezgif com-optimize]()
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://submissions.us-east-1.linodeobjects.com/web102/a187HepG.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://github.com/user-attachments/assets/58f90c27-562e-4bc9-b9f5-a23feb9879ee' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ezgif.com
