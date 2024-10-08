@@ -36,7 +36,6 @@ The following **additional** features are implemented:
 - [X] Play again feature after round is finished with shuffle button.
 
 ## Video Walkthrough
-![Project2_Video-ezgif com-optimize]()
 
 Here's a walkthrough of implemented required features:
 
