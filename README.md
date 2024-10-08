@@ -1,10 +1,10 @@
-# Web Development Project 2 - *Name of App Here*
+# Web Development Project 2/3 - *Movie Trivia*
 
 Submitted by: Rafid Rahman
 
 This web app: Is a flashcard app turned into a trivia game. The user can go through each question and if they know the trivia question's answer, they add a point to their total score. The theme of this trivia is TV shows and Movies. The question of whether it is about a show or movie is differentiated by the color blue for movies and red for shows. The user can click on the card to reveal the answer and click next to go to the next card.
 
-Time spent: 2 hours spent in total
+Time spent: 3 hours spent in total
 
 ## Required Features
 
@@ -15,12 +15,19 @@ The following **required** functionality is completed:
 - [X] **A list of card pairs is created**
 - [X] **Clicking on the card shows the corresponding component of the information pair**
 - [X] **Clicking the next button displays a random new card**
+- [X] - [ ] **The user can enter their guess in a box before seeing the flipside of the card**
+- [X] **Clicking on a submit button shows visual feedback about whether the answer was correct or incorrect**
+- [X] **A back button is displayed on the card and can be used to return to the previous card in a set sequence**
+- [X] **A next button is displayed on the card and can be used to navigate to the next card in a set sequence**
+
 
 The following **optional** features are implemented:
 
 - [ ] Cards contains images in addition to or in place of text
 - [X] Cards have different visual styles such as color based on their category
   - [X] *visual style implemented*
+- [X] A shuffle button is used to randomize the order of the cards
+- [X] A user can mark a card that they have mastered and have it removed from the pool of answers as well as added to a list of mastered cards
 
 The following **additional** features are implemented:
 
@@ -33,7 +40,7 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented required features:
 
-<img src='https://github.com/user-attachments/assets/53aac1df-df7c-4feb-8000-849b434250e1' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://submissions.us-east-1.linodeobjects.com/web102/a187HepG.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 <!-- Replace this with whatever GIF tool you used! -->
 GIF created with ezgif.com
